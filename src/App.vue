@@ -1,20 +1,21 @@
 <template>
     <ul>
-        <learning-resource
+        <stored-resources :resources="storedResources"></stored-resources>
+        <!-- <learning-resource
          v-for="res in storedResources" 
          :key="res.id" 
          :title="res.title"
          :description="res.description"
          :link="res.link"
-         ></learning-resource>
+         ></learning-resource> -->
          <!-- here we are feeding the values in props in learning resource file -->
     </ul>
 </template>
 <script>
- import LearningResource from './components/learningResourse/LearningResource.vue'
+ import StoredResources from './components/learningResourse/StoredResources.vue';
   export default{
     components: {
-     LearningResource
+     StoredResources
     },
     data(){
         return{
