@@ -1,21 +1,16 @@
 <template>
     <ul>
+        <the-header title="RememberMe"></the-header>
         <stored-resources :resources="storedResources"></stored-resources>
-        <!-- <learning-resource
-         v-for="res in storedResources" 
-         :key="res.id" 
-         :title="res.title"
-         :description="res.description"
-         :link="res.link"
-         ></learning-resource> -->
-         <!-- here we are feeding the values in props in learning resource file -->
+       
     </ul>
 </template>
 <script>
  import StoredResources from './components/learningResourse/StoredResources.vue';
+ import TheHeader from './components/layout/TheHeader.vue'; 
   export default{
     components: {
-     StoredResources
+     StoredResources,TheHeader,
     },
     data(){
         return{
